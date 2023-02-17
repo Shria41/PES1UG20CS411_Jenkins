@@ -11,11 +11,12 @@ pipeline{
     stage('Test'){
       steps{
         sh './a.out'
-        echo 'Test successful
+        echo 'Test successful'
       }
     }
     stage('Deploy'){
       steps{
+        sh 'mvn deploy'
         echo 'Deploy successful'
       }
     }
